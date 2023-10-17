@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pexel API Search</title>
+</head>
+<body>
+  <h1>Pexel Photo Search</h1>
+  <form (ngSubmit)="searchPhotos()">
+    <input type="text" [(ngModel)]="search" name="search" placeholder="Enter Search Name Here">
+    <input type="number" [(ngModel)]="perPage" name="perPage">
+    <button type="submit">Search</button>
+  </form>
+  <ul *ngFor="let d of data">
+    <img src="{{d.src.medium}}" alt="">
+  </ul>
+
+</body>
+</html>
